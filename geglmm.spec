@@ -1,16 +1,15 @@
 Summary:	C++ bindings for GEGL
 Summary(pl.UTF-8):	Wiązania C++ do GEGL
 Name:		geglmm
-Version:	0.0.17.1
+Version:	0.0.22
 Release:	1
 License:	LGPL v3
 Group:		Libraries
 Source0:	http://ftp.gnome.org/pub/GNOME/sources/geglmm/0.0/%{name}-%{version}.tar.bz2
-# Source0-md5:	de2f3601e70a93ab612f74d1b94bce5b
-Patch0:		%{name}-ac.patch
+# Source0-md5:	70cb8d6a97b0d51cc25bde84f4593786
 BuildRequires:	autoconf
 BuildRequires:	automake >= 1:1.9
-BuildRequires:	gegl-devel >= 0.0.17
+BuildRequires:	gegl-devel >= 0.0.22
 BuildRequires:	glibmm-devel >= 2.12.8
 BuildRequires:	libstdc++-devel
 BuildRequires:	libtool
@@ -28,7 +27,7 @@ Summary:	Header files for geglmm library
 Summary(pl.UTF-8):	Pliki nagłówkowe biblioteki geglmm
 Group:		Development/Libraries
 Requires:	%{name} = %{version}-%{release}
-Requires:	gegl-devel >= 0.0.17
+Requires:	gegl-devel >= 0.0.22
 Requires:	glibmm-devel >= 2.12.8
 
 %description devel
@@ -62,7 +61,6 @@ geglmm - przykładowe programy.
 
 %prep
 %setup -q
-%patch0 -p1
 
 %build
 %{__libtoolize}
@@ -95,7 +93,7 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(644,root,root,755)
 %doc AUTHORS ChangeLog NEWS README
 %attr(755,root,root) %{_libdir}/libgeglmm.so.*.*.*
-%attr(755,root,root) %ghost %{_libdir}/libgeglmm.so.1
+%attr(755,root,root) %ghost %{_libdir}/libgeglmm.so.2
 
 %files devel
 %defattr(644,root,root,755)
