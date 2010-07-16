@@ -2,7 +2,7 @@ Summary:	C++ bindings for GEGL
 Summary(pl.UTF-8):	Wiązania C++ do GEGL
 Name:		geglmm
 Version:	0.0.22
-Release:	1
+Release:	2
 License:	LGPL v3
 Group:		Libraries
 Source0:	http://ftp.gnome.org/pub/GNOME/sources/geglmm/0.0/%{name}-%{version}.tar.bz2
